@@ -38,6 +38,5 @@ npm run build:ui
 npm start
 
 To run the frontend in development mode:
-cd frontend
-npm run dev
+npm --prefix frontend run dev
 

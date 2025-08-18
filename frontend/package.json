@@ -5,6 +5,8 @@
   "description": "frontend blogilistalle",
   "type": "module",
   "scripts": {
+    "backend:start": "npm --prefix .. run start",
+    "backend:test": "npm --prefix .. run start:test",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -31,6 +33,7 @@
     "@vitest/coverage-v8": "^3.1.4",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.37.5",
