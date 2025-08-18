@@ -1,0 +1,40 @@
+GET http://localhost:3003/api/blogs
+###
+GET http://localhost:3003/api/users
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "Maketti-Spaghetti",
+  "name": "Make",
+  "password": "SeekritKey"
+}
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "Maketti-Spaghetti",
+  "password": "SeekritKey"
+}
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1ha2V0dGktU3BhZ2hldHRpIiwiaWQiOiI2ODJlMTc4OTk2MWI4MDA4Nzk5NmU1MjMiLCJpYXQiOjE3NDc4NTI0NzEsImV4cCI6MTc0Nzg1NjA3MX0._ANFlSrsC6p6ZYt5apaERr38bB2p_oofM-pzQoGF7pI
+
+{
+  "title": "Ohjelmoinnin opas2",
+  "author": "Mc Soft",
+  "url": "www.google.com",
+  "userId": "682b865608eb906a72f56c1b",
+  "likes": 20
+}
+###
+DELETE http://localhost:3003/api/blogs/682e1e41794f10228b28812e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1ha2V0dGktU3BhZ2hldHRpIiwiaWQiOiI2ODJlMTc4OTk2MWI4MDA4Nzk5NmU1MjMiLCJpYXQiOjE3NDc4NTI0NzEsImV4cCI6MTc0Nzg1NjA3MX0._ANFlSrsC6p6ZYt5apaERr38bB2p_oofM-pzQoGF7pI
+
+{
+
+}

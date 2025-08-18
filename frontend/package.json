@@ -1,0 +1,46 @@
+{
+  "name": "blogilista_frontend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "frontend blogilistalle",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "test": "npx vitest run && echo 'Running Playwright tests...' && playwright test --project chromium && echo ' Run test:report for detailed results'",
+    "test:all": "npx vitest run && echo 'Running all Playwright tests...' && playwright test && echo ' Run test:report for detailed results'",
+    "test:report": "playwright show-report",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@playwright/test": "^1.54.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^3.1.4",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-playwright": "^2.2.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "eslint-plugin-vitest-globals": "^1.5.0",
+    "globals": "^16.2.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.5.3",
+    "vite": "^6.3.1",
+    "vitest": "^3.1.4"
+  }
+}
