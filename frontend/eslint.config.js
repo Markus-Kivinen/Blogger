@@ -5,6 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import vitest from 'eslint-plugin-vitest-globals'
 import playwright from 'eslint-plugin-playwright'
+import importPlugin from 'eslint-plugin-import'
 
 
 export default [
@@ -20,12 +21,20 @@ export default [
         ecmaFeatures: { jsx: true },
       },
     },
-    settings: { react: { version: '18.2' } },
+    settings: {
+      react: { version: '18.2' },
+      'import/resolver': {
+        'node': {
+          'extensions': ['.js', '.jsx', '.ts', '.tsx']
+        }
+      }
+    },
     plugins: {
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-	  playwright
+      import: importPlugin,
+	    playwright
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -42,6 +51,7 @@ export default [
       'no-console': 0,
       'react/prop-types': 0,
       'react/react-in-jsx-scope': 'off',
+      'import/no-unresolved': ['error', { caseSensitive: true }],
       'no-unused-vars': 0,
       'react-refresh/only-export-components': [
         'warn',
