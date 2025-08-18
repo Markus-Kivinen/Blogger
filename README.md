@@ -20,11 +20,12 @@ Clone the repository:
 git clone git@github.com:Markus-Kivinen/Blogger.git
 cd Blogger
 
-# Create .env containing, or load them as environment variables
+# Create .env containing:
 MONGODB_URI=mongodb+srv://****
 TEST_MONGODB_URI=mongodb+srv://****
 PORT=3003
 SECRET=your_jwt_secret
+Or load them as environment variables
 
 # Install dependencies
 npm ci && npm --prefix frontend ci
