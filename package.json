@@ -5,14 +5,13 @@
   "description": "backend blogilistalle",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "npx eslint . --fix",
     "start": "cross-env NODE_ENV=production node index.js",
     "start:test": "cross-env NODE_ENV=test node index.js",
     "dev": "cross-env NODE_ENV=development node --watch index.js",
+    "lint": "eslint .",
+    "lint:fix": "npx eslint . --fix",
     "test": "cross-env NODE_ENV=test node --test --test-concurrency=1",
-    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
-    "deploy:full": "cd ../.. && git subtree push --prefix Osa5/backend https://github.com/Markus-Kivinen/blogilista.git main"
+    "build:ui": "rm -rf dist && cd frontend && npm run build && cp -r dist ../"
   },
   "author": "Markus Kivinen",
   "license": "MIT",
