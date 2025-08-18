@@ -101,6 +101,7 @@ describe('<Toggleable />', () => {
 
   test('renders its children', () => {
     screen.getByText('togglable content')
+    expect(container.querySelector('.testDiv')).toBeDefined()
   })
 
   test('at start the children are not displayed', () => {
