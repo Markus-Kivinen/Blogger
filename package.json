@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "lint:fix": "npx eslint . --fix",
     "test": "cross-env NODE_ENV=test node --test --test-concurrency=1",
-    "build:ui": "rm -rf dist && cd frontend && npm run build && cp -r dist ../"
+    "build:ui": "npm --prefix frontend run build"
   },
   "author": "Markus Kivinen",
   "license": "MIT",
